@@ -26,7 +26,7 @@ public class PreviewFactory {
 			for (String getterMethodName : getterMethodNames) {
 				getterMethod = aResource.getClass().getMethod(getterMethodName);
 				boolean multiple = getterMethod.getAnnotation(OslcOccurs.class).value().equals(Occurs.ZeroOrMany) || getterMethod.getAnnotation(OslcOccurs.class).value().equals(Occurs.OneOrMany);
-				boolean showPropertyValueAsLink = getterMethod.getAnnotation(OslcValueType.class).value().equals(ValueType.Resource);
+				boolean showPropertyValueAsLink = (null != getterMethod.getAnnotation(OslcValueType.class)) && (getterMethod.getAnnotation(OslcValueType.class).value().equals(ValueType.Resource));
 				PropertyDefintion key;
 				if (showPropertyHeadingsAsLinks) {
 					key = constructPropertyDefintion(getterMethod.getAnnotation(OslcPropertyDefinition.class).value(), getterMethod.getAnnotation(OslcName.class).value());
@@ -78,7 +78,12 @@ public class PreviewFactory {
 		PropertyValue value = new PropertyValue();
 		value.setRepresentationType(representationType);
 		value.setRepresentAsList(representAsList);
-		value.setData(data);
+		if (null == data) {
+	        value.setData("<not set>");
+		}
+		else {
+	        value.setData(data);
+		}
 		return value;
 	}
 	
@@ -96,6 +101,9 @@ public class PreviewFactory {
 	}
 	
     private static org.eclipse.lyo.oslc_ui.Link constructLink(Link link) {
+        if (null == link) {
+            return null;
+        }
         if (StringUtils.isBlank(link.getLabel())) {
             return constructLink(link.getValue().toString(), link.getValue().toString());
         }
