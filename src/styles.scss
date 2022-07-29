@@ -1,11 +1,32 @@
 body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
+  padding: 15px 0 5px 0;
 }
 
-html, body { height: 100%; }
+html, body, app-root, app-root > section, app-root > section > app-selector { height: 100%; display: block; }
+app-root > section > app-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+app-search-header {
+  flex-grow: 1;
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+div.footer button.btn {
+  width: 75px !important;
+  align-items: baseline;
+}
+
+
+
+.card-body {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 .cdk-overlay-container {
   position: fixed;
