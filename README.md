@@ -14,6 +14,7 @@
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
 - [Further help](#further-help)
+- [Contributing](#contributing)
 
 ## How to use
 
@@ -101,3 +102,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+
+## Contributing
+
+See [contributing](https://github.com/eclipse/lyo#contributing) under the main [Eclipse Lyo](https://github.com/eclipse/lyo) repository.
