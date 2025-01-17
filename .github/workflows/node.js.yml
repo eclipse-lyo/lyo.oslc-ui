@@ -44,7 +44,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-      continue-on-error: ${{ matrix.experimental }}
+      # continue-on-error: ${{ matrix.experimental }}
       run: |
         npm i
         npm run build:elements-prod
@@ -56,3 +56,8 @@ jobs:
         name: build-artifact
         path: dist
         
+    - name: Last step
+      if: always()
+      # continue-on-error: ${{ matrix.experimental }}
+      run: |
+        echo "Last step to avoid the experimental job failures"
