@@ -14,12 +14,18 @@ updates:
       deps-angular:
         patterns:
           - "@angular/*"
+        update-types:
+          - "minor"
+          - "patch"
       deps-typescript:
         patterns:
           - "ts-*"
           - "tslib"
           - "tslint"
           - "typescript"
+        update-types:
+          - "minor"
+          - "patch"
       deps-testing:
         patterns:
           - "karma*"
