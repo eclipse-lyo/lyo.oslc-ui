@@ -17,8 +17,8 @@ jobs:
           #   experimental: true
           - node-version: 14
             experimental: false
-          # - node-version: 16
-          #   experimental: true
+          - node-version: 16
+            experimental: true
           # - node-version: 18
           #   experimental: true
           # - node-version: 20
