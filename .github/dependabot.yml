@@ -11,9 +11,24 @@ updates:
     schedule:
       interval: "daily"
     groups:
-      angular:
+      deps-angular:
         patterns:
           - "@angular/*"
+      deps-typescript:
+        patterns:
+          - "ts-*"
+          - "tslib"
+          - "tslint"
+          - "typescript"
+      deps-testing:
+        patterns:
+          - "karma*"
+          - "karma-*"
+          - "jasmine-*"
+          - "@types/jasmine*"
+      deps-webcomponents:
+        patterns:
+          - "@webcomponents/*"
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     open-pull-requests-limit: 99
