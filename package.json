@@ -23,7 +23,7 @@
     "@angular/common": "^10.2.5",
     "@angular/compiler": "^10.2.5",
     "@angular/core": "^10.2.5",
-    "@angular/elements": "^10.2.5",
+    "@angular/elements": "^19.1.2",
     "@angular/forms": "^10.2.5",
     "@angular/localize": "^10.2.5",
     "@angular/material": "^10.2.0",
