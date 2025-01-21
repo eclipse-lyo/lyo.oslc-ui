@@ -40,7 +40,7 @@
     "rxjs": "^6.6.7",
     "tslib": "^2.8.1",
     "web-animations-js": "^2.3.2",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1002.4",
