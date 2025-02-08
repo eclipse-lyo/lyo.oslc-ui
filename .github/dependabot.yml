@@ -9,7 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     open-pull-requests-limit: 99
     schedule:
-      interval: "daily"
+      interval: "monthly"
     groups:
       deps-angular:
         patterns:
