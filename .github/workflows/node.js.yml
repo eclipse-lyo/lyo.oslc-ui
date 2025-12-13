@@ -25,8 +25,8 @@ jobs:
             experimental: true
           - node-version: 22
             experimental: true
-          - node-version: 24
-            experimental: true
+          # - node-version: 24
+          #   experimental: true
     continue-on-error: ${{ matrix.experimental }}
 
     steps:
