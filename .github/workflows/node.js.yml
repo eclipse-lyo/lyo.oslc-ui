@@ -46,10 +46,12 @@ jobs:
     - name: Build
       # continue-on-error: ${{ matrix.experimental }}
       run: |
+        # Only set legacy OpenSSL provider for Node.js 18+
+        if [ "${{ matrix.node-version }}" = "18" ]; then
+          export NODE_OPTIONS="--openssl-legacy-provider"
+        fi
         npm i
         npm run build:elements-prod
-      env:
-        NODE_OPTIONS: --openssl-legacy-provider
 
     - name: Archive build
       if: ${{ success() && matrix.node-version == 14 }}
